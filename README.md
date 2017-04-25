@@ -6,6 +6,6 @@ A1: Ich habe zu Beginn die Hashes der lemmatisierten Sätze im Dictionary als ke
 
 A2: Das ganze clear-statement habe ich ebenfalls von der stackoverflow-Lösung unter http://stackoverflow.com/questions/12160418/why-is-lxml-etree-iterparse-eating-up-all-my-memory adaptiert.
 
-Feedback:
+Reflexion:
 a) Ich habe zum ersten mal mit git und github gearbeitet, und mit dem Reservoir Sampling sowie auch mit hashes (obwohl ich diese Methode wieder verwerfen musste, aber damit gearbeitet hatte ich trotzdem). 
-b) 14h
+b) 15h
