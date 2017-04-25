@@ -18,7 +18,8 @@ def gettitles(infile, testfile, trainfile, k):
 	
     #Reservoir sampling algorithm to find k random titles (cf. lecture slides)
     reservoir = []
-    for t, (action, item) in enumerate(titles):
+    context = enumerate(titles)
+    for t, (action, item) in context:
         if t < k:
             reservoir.append(item.text)
         else:
@@ -31,6 +32,12 @@ def gettitles(infile, testfile, trainfile, k):
                 except:
                     trainfile.write("Title Error" + "\n")
                 reservoir[m] = item.text
+        # Delete what was used to free up memory space
+        item.clear()
+        for ancestor in item.xpath('ancestor-or-self::*'):
+            while ancestor.getprevious() is None:
+                del ancestor.getparent()[0]
+    del context
 							
     #Write the k random titles in reservoir into the testfile.
     for title in reservoir:
